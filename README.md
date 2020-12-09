@@ -415,27 +415,12 @@ We will use **Azure Functions App Settings** to hold our configuration items val
 az functionapp config appsettings set \
     --name AggregatorForMe \
     --resource-group netconfchina2020-rg \
-    --settings NET_BLOG_RSS_URL="https://devblogs.microsoft.com/dotnet/feed/"
-
-az functionapp config appsettings set \
-    --name AggregatorForMe \
-    --resource-group netconfchina2020-rg \
-    --settings EMAIL_FROM="<YOUR_SENDER_EMAIL_ADDRESS>"
-
-az functionapp config appsettings set \
-    --name AggregatorForMe \
-    --resource-group netconfchina2020-rg \
-    --settings EMAIL_TO="<YOUR_RECEIVE_EMAIL_ADDRESS>"
-
-az functionapp config appsettings set \
-    --name AggregatorForMe \
-    --resource-group netconfchina2020-rg \
-    --settings HOTMAIL_SMTP_SERVER="<YOUR_SMTP_SERVER_ADDRESS>"
-
-az functionapp config appsettings set \
-    --name AggregatorForMe \
-    --resource-group netconfchina2020-rg \
-    --settings HOTMAIL_SMTP_PORT="<YOUR_SMTP_SERVER_PORT>"
+    --settings \
+    "NET_BLOG_RSS_URL=https://devblogs.microsoft.com/dotnet/feed/" \
+    "EMAIL_FROM=YOUR_SENDER_EMAIL_ADDRESS" \
+    "EMAIL_TO=YOUR_RECEIVE_EMAIL_ADDRESS" \
+    "HOTMAIL_SMTP_SERVER=YOUR_SMTP_SERVER_ADDRESS" \
+    "HOTMAIL_SMTP_PORT=YOUR_SMTP_SERVER_PORT"
 ```
 
 Check on Azure portal we can see these settings have been successfully created. So how can we get them in code:
