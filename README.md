@@ -1,4 +1,4 @@
-# Building Serverless Application with Azure Functions
+# Quickly Build Serverless Application with Azure Functions and .NET
 
 ## Pre-request
 
